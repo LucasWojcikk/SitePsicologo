@@ -18,7 +18,7 @@
     <!-- Marca do site com logo -->
     <a class="navbar-brand" href="index.html">
         <img src="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" width="50" height="50" class="d-inline-block align-top" alt="Logo">
-        Umdia.psico
+        Psicologia
     </a>
     <!-- Botão para menu responsivo -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,28 +31,73 @@
                 <a class="nav-link" href="index.html">Página Inicial</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="createPost.html">Criar postagem</a>
+                <a class="nav-link" href="createPost.html">Criar Postagem</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="posts.html">Posts</a>
             </li>
         </ul>
-        <!-- Botão de login -->
-        <form class="form-inline my-2 my-lg-0">
-            <button onclick="location.href='login.html'">Login</button>
-        </form>
+
     </div>
 </nav>
 
 <!-- Seção de criação de postagem -->
+<!-- Titulo -->
 <div class="container mt-5">
-    <h2>Criar nova postagem</h2>
+    <h2>Criar Nova Postagem</h2>
     <form>
         <div class="form-group">
-            <label for="postContent">Conteúdo da postagem</label>
+            <label for="postTitle">Título</label>
+            <textarea class="form-control" id="postTitle" rows="1" placeholder="Título da sua postagem..."></textarea>
+        </div>
+    </form>
+</div>
+
+<!-- Autor -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postAuthor">Nome do autor</label>
+            <textarea class="form-control" id="postAuthor" rows="1" placeholder="Nome do autor..."></textarea>
+        </div>
+    </form>
+</div>
+
+<!-- Data -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postDate">Data da postagem</label>
+            <br>
+            <input type="date" id="postDate">
+        </div>
+    </form>
+</div>
+
+<!-- Resumo -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postSummary">Resumo da postagem</label>
+            <textarea class="form-control" id="postSummary" rows="1" placeholder="Escreva aqui o resumo da sua postagem..."></textarea>
+        </div>
+    </form>
+</div>
+
+<!-- Conteúdo -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postContent">Conteúdo da Postagem</label>
             <textarea class="form-control" id="postContent" rows="10" placeholder="Escreva aqui o conteúdo da sua postagem..."></textarea>
         </div>
-        <button >Publicar</button>
+
+        <div class="d-flex justify-content-start">
+            <button type="submit" class="btn btn-primary">Publicar</button>
+
+            <a href="/index.html" class="btn btn-primary">Cancelar</a>
+        </div>
+
     </form>
 </div>
 
