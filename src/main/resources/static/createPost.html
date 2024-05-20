@@ -45,14 +45,62 @@
 </nav>
 
 <!-- Seção de criação de postagem -->
+<!-- Titulo -->
 <div class="container mt-5">
     <h2>Criar Nova Postagem</h2>
+    <form>
+        <div class="form-group">
+            <label for="postTitle">Título</label>
+            <textarea class="form-control" id="postTitle" rows="1" placeholder="Título da sua postagem..."></textarea>
+        </div>
+    </form>
+</div>
+
+<!-- Autor -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postAuthor">Nome do autor</label>
+            <textarea class="form-control" id="postAuthor" rows="1" placeholder="Nome do autor..."></textarea>
+        </div>
+    </form>
+</div>
+
+<!-- Data -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postDate">Data da postagem</label>
+            <br>
+            <input type="date" id="postDate">
+        </div>
+    </form>
+</div>
+
+<!-- Resumo -->
+<div class="container mt-5">
+    <form>
+        <div class="form-group">
+            <label for="postSummary">Resumo da postagem</label>
+            <textarea class="form-control" id="postSummary" rows="1" placeholder="Escreva aqui o resumo da sua postagem..."></textarea>
+        </div>
+    </form>
+</div>
+
+<!-- Conteúdo -->
+<div class="container mt-5">
     <form>
         <div class="form-group">
             <label for="postContent">Conteúdo da Postagem</label>
             <textarea class="form-control" id="postContent" rows="10" placeholder="Escreva aqui o conteúdo da sua postagem..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Publicar</button>
+
+        <div class="d-flex justify-content-start">
+            <button type="submit" class="btn btn-primary">Publicar</button>
+
+            <a href="/index.html" class="btn btn-primary">Cancelar</a>
+        </div>
+        
     </form>
 </div>
 
