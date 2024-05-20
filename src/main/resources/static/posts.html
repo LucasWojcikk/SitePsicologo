@@ -1,30 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Site Psicologo</title>
-
-	<script src="js/scripts.js"></script>
-
+	<title>Posts - Site de Psicologia</title>
+	<!-- Link para o CSS do Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Link para o arquivo de estilos personalizados -->
+	<link href="css/styles.css" rel="stylesheet">
 </head>
+<body>
 
-
-<body onload="getResponseApi()">
-	<h1>Lista de postagens</h1>
-	
-	<div id="postagens">
-
+<!-- Barra de navegação -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<!-- Marca do site com logo -->
+	<a class="navbar-brand" href="index.html">
+		<img src="https://static.vecteezy.com/system/resources/thumbnails/023/630/280/small_2x/human-brain-with-transparent-background-png.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+		Psicologia
+	</a>
+	<!-- Botão para menu responsivo -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Links de navegação -->
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Página Inicial</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="createpost.html">Criar Postagem</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="posts.html">Posts</a>
+			</li>
+		</ul>
+		<!-- Botão de login -->
+		<form class="form-inline my-2 my-lg-0">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="location.href='login.html'">Login</button>
+		</form>
 	</div>
+</nav>
 
-	<a href="/createPost.html">
-        <button>Nova postagem</button>
-    </a>
+<!-- Seção de postagens -->
+<div class="container mt-5">
+	<h2>Postagens Recentes</h2>
+	<div class="row">
+		<!-- Card 1 -->
+		<div class="col-md-4">
+			<div class="card mb-4">
+				<div class="card-body">
+					<h5 class="card-title">Título da Postagem 1</h5>
+					<p class="card-text">Este é um exemplo de conteúdo de postagem. Aqui você pode adicionar o texto da postagem.</p>
+					<a href="#" class="btn btn-primary">Ler Mais</a>
+				</div>
+			</div>
+		</div>
+		<!-- Card 2 -->
+		<div class="col-md-4">
+			<div class  ="card mb-4">
+				<div class="card-body">
+					<h5 class="card-title">Título da Postagem 2</h5>
+					<p class="card-text">Este é um exemplo de conteúdo de postagem. Aqui você pode adicionar o texto da postagem.</p>
+					<a href="#" class="btn btn-primary">Ler Mais</a>
+				</div>
+			</div>
+		</div>
+		<!-- Card 3 -->
+		<div class="col-md-4">
+			<div class="card mb-4">
+				<div class="card-body">
+					<h5 class="card-title">Título da Postagem 3</h5>
+					<p class="card-text">Este é um exemplo de conteúdo de postagem. Aqui você pode adicionar o texto da postagem.</p>
+					<a href="#" class="btn btn-primary">Ler Mais</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-	<a href="/index.html">
-        <button>Voltar</button>
-    </a>
-
+<!-- Scripts do Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
