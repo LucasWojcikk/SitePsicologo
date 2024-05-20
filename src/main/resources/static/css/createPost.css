@@ -30,7 +30,7 @@ body {
 
 /* Estilo para o link ativo na navbar */
 .navbar-nav .nav-item.active .nav-link {
-    color: #007bff !important;
+    color: #000000 !important;
     font-weight: bold;
 }
 
@@ -99,4 +99,37 @@ footer a:hover {
 footer .text-center {
     background-color: #e9ecef;
     padding: 1rem 0;
+}
+
+/* botão de login */
+button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #fffdfd 0%, #99fbf0 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before {
+    width: 9em;
 }
