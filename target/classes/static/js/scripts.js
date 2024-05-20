@@ -1,27 +1,48 @@
 function getResponseApi() {
     fetch("http://localhost:8080/postagens")
         .then(function(response) {
-
-            const data = response.json();
-            console.log(data)
-            return data;
+            return response.json();
         })
-        // .then(function(data) {
-        //     data.forEach(function(post) {
-        //         addPost(post);
-        //     });
-        // });
+        .then(function(data) {
+            data.forEach(function(post) {
+                addPost(post)
+                // console.log(post);
+            });
+        });
 }
 
 // function addPost(post) {
-//     const divPost = document.getElementById("postagens");
+//     console.log(post["titulo"])
 
-//     for (const key in post) {
-//         const postItem = document.createElement("p");
-//         postItem.textContent = `${key}: ${post[key]}`;
-//         divPost.appendChild(postItem);
-//     }
 // }
+
+function addPost(post) {
+    // Seleciona a div onde as postagens serão inseridas
+    const postagensContainer = document.getElementById("postagens");
+
+    // Cria a estrutura HTML para uma nova postagem com flip card
+    const postElement = document.createElement("div");
+    postElement.className = "col-md-4";
+    postElement.innerHTML = `
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p class="title">${post.titulo}</p>
+                </div>
+                <div class="flip-card-back">
+                    <p>${post.resumo}</p>
+                    <p>${post.autor}</p>
+                    <p>${post.dataPostagem}</p>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Adiciona a nova postagem ao container de postagens
+    postagensContainer.querySelector('.row').appendChild(postElement);
+}
+
+document.addEventListener('DOMContentLoaded', getResponseApi);
 
 // function createNewPost(titulo, resumo, conteudo, dataPostagem, autor){
 //     fetch("http://127.0.0.1:5500/createPost.html",
