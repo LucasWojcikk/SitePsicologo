@@ -42,58 +42,32 @@ function addPost(post) {
     postagensContainer.querySelector('.row').appendChild(postElement);
 }
 
-document.addEventListener('DOMContentLoaded', getResponseApi);
 
-// function createNewPost(titulo, resumo, conteudo, dataPostagem, autor){
-//     fetch("http://127.0.0.1:5500/createPost.html",
-//     {
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json'
-//         },
-//         method: "POST",
-//         body: JSON.stringify({
-//             titulo: titulo,
-//             resumo: resumo,
-//             conteudo: conteudo,
-//             dataPostagem: dataPostagem,
-//             autor: autor
-//         })
-//     })
-//     .then(function (res) {console.log(res)}).
-//     catch(function (res) {console.log(res)})
-// }
+function createPost() {
+    var postagem = {
+        "titulo": document.getElementById("postTitle").value,
+        "resumo": document.getElementById("postSummary").value,
+        "conteudo": document.getElementById("postContent").value,
+        "dataPostagem": document.getElementById("postDate").value,
+        "autor": document.getElementById("postAuthor").value
+    };
+    
+    // console.log(postagem);
 
-// function limparForm(regTitulo, regResumo, regConteudo, regDataPostagem, regAutor) {
-//     regTitulo.value = ""
-//     regResumo.value = ""
-//     regConteudo.value = ""
-//     regDataPostagem.value = ""
-//     regAutor.value = ""
-// }
+    fetch('http://localhost:8080/cadastrar-postagem', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postagem)
+    })
+    .then(data => {
+        alert("Postagem criada com sucesso!");
+        window.location.href = "posts.html"; 
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert("Ocorreu um erro ao criar a postagem.");
+    });
+}
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const newPost = document.querySelector("form");
-//     const regAutor = document.querySelector(".autor");
-//     const regConteudo = document.querySelector(".conteudo");
-//     const regDataPostagem = document.querySelector(".data");
-//     const regResumo = document.querySelector(".resumo");
-//     const regTitulo = document.querySelector(".titulo");
-
-//     newPost.addEventListener('submit', function (event){
-//         event.preventDefault();
-        
-//         createNewPost(
-//             regTitulo.value, regResumo.value, regConteudo.value, regDataPostagem.value, regAutor.value
-//         )
-//         // const dados = {
-//         //     titulo: regTitulo.value,
-//         //     resumo: regResumo.value,
-//         //     conteudo: regConteudo.value,
-//         //     dataPostagem: regDataPostagem.value,
-//         //     autor: regAutor.value,
-//         // };
-//         // console.log(dados);
-//         limparForm(regTitulo, regResumo, regConteudo, regDataPostagem, regAutor)
-//     });
-// });
