@@ -1,0 +1,20 @@
+/* Estilo para a barra de navegação */
+.navbar {
+    background-color: #ffffff; /* Cor de fundo da navbar */
+}
+
+/* Estilo para os links na navbar */
+.navbar-nav .nav-link {
+    color: #000000; /* Cor dos links */
+    font-weight: bold; /* Fonte em negrito */
+}
+
+/* Estilo para o link ativo na navbar */
+.navbar-nav .nav-item.active .nav-link {
+    color: #ff0000; /* Cor do link ativo */
+}
+
+/* Estilo para o logo na navbar */
+.navbar-brand img {
+    margin-right: 10px; /* Espaçamento à direita do logo */
+}
