@@ -114,72 +114,43 @@ button:hover::before {
     width: 9em;
 }
 
-/* BOTÃO POWER */
-.toggle-switch {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 80px; /* Modificado o tamanho para 80px */
-    height: 40px; /* Modificado o tamanho para 40px */
-    --light: #d8dbe0;
-    --dark: #28292c;
-    --link: rgb(27, 129, 112);
-    --link-hover: rgb(24, 94, 82);
-    z-index: 1000;
-}
-
-.switch-label {
-    position: absolute;
-    width: 100%;
-    height: 40px; /* Modificado o tamanho para 40px */
-    background-color: var(--dark);
-    border-radius: 20px; /* Modificado o raio para 20px */
-    cursor: pointer;
-    border: 2px solid var(--dark); /* Modificado a espessura para 2px */
-}
-
-.checkbox {
-    position: absolute;
-    display: none;
-}
-
-.slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px; /* Modificado o raio para 20px */
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider {
-    background-color: var(--light);
-}
-
-.slider::before {
-    content: "";
-    position: absolute;
-    top: 7px; /* Ajustado a posição vertical */
-    left: 7px; /* Ajustado a posição horizontal */
-    width: 26px; /* Modificado o tamanho para 26px */
-    height: 26px; /* Modificado o tamanho para 26px */
-    border-radius: 50%;
-    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
-    box-shadow: inset 12px -4px 0px 0px var(--light);
-    background-color: var(--dark);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider::before {
-    -webkit-transform: translateX(50px);
-    -ms-transform: translateX(50px);
-    transform: translateX(50px);
-    background-color: var(--dark);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+/*botão instagram */
 
 ion-icon {
     font-size: 32px;
+}
+
+
+/* botão flutuante */
+
+
+.toggle-switch {
+    position: fixed;
+    bottom: 20px; /* ajuste conforme necessário */
+    right: 20px; /* ajuste conforme necessário */
+}
+
+.switch-label {
+    display: block;
+    width: 60px;
+    height: 34px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: black; /* cor inicial */
+}
+
+.toggle-icon.active {
+    color: black; /* cor quando clicado */
+}
+
+body.dark {
+    background-color: #121212; /* cor de fundo escura */
+    color: #fff; /* cor do texto */
 }

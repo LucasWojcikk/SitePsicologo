@@ -74,3 +74,9 @@ function createPost() {
             alert("Ocorreu um erro ao criar a postagem.");
         });
 }
+
+// Index - botão alterar tema
+function toggleDarkTheme() {
+    const body = document.querySelector('body');
+    body.classList.toggle('dark');
+}
