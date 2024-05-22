@@ -1,0 +1,34 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: left; /* Adicionado para garantir alinhamento à esquerda global */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da marca da navbar */
+.navbar-brand {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Margem direita para a logo */
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Estilo dos links da navbar */
+.navbar-nav .nav-link {
+    font-size: 1.1em;
+}
+
+/* Estilo para o link ativo na navbar */
+.navbar-nav .nav-item.active .nav-link {
+    color: #090000 !important;
+    font-weight: bold;
+}
