@@ -1,8 +1,10 @@
 /* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    text-align: left; /* Adicionado para garantir alinhamento à esquerda global */
+.nunito-sans {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Pode ajustar este valor conforme necessário */
+    font-style: normal;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 /* Estilo da barra de navegação */
@@ -153,4 +155,16 @@ ion-icon {
 body.dark {
     background-color: #121212; /* cor de fundo escura */
     color: #fff; /* cor do texto */
+}
+
+/* imagem */
+
+/* Estilizando a imagem para ter uma transição suave */
+#interactive-image {
+    transition: transform 0.3s ease;
+}
+
+/* Quando o mouse passa por cima da imagem, ela aumenta de tamanho */
+#interactive-image:hover {
+    transform: scale(1.1);
 }

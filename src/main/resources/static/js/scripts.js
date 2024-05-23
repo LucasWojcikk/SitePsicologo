@@ -75,10 +75,3 @@ function createPost() {
         });
 }
 
-// Index - botão alterar tema
-function toggleDarkTheme() {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark');
-
-    // Incompleto, vou terminar - Letícia 
-}
