@@ -7,8 +7,6 @@
     font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
-
-
 /* Estilo da barra de navegação */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,9 +24,15 @@
     align-items: center;
 }
 
+.navbar-brand:hover img{
+    transform: scale(1.1); /* aumenta a escala*/
+
+}
+
 /* Margem direita para a logo */
 .navbar-brand img {
     margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Estilo dos links da navbar */
