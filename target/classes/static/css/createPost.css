@@ -106,3 +106,8 @@ footer .text-center {
     padding: 1rem 0;
 }
 
+/* Estilo para o link ativo na navbar */
+.navbar-nav .nav-item.active .nav-link {
+    color: #090000 !important;
+    font-weight: bold;
+}
