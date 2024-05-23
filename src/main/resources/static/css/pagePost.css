@@ -47,3 +47,39 @@
 ion-icon {
     color: black;
 }
+
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* Ajusta o tamanho do ícone */
+    padding: 0.25rem; /* Ajusta o padding para deixar o botão pequeno */
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem; /* Espaçamento entre os botões */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.btn-icon:first-child {
+    margin-left: 0; /* Remove o espaçamento do primeiro botão */
+}
+
+.btn-icon ion-icon {
+    pointer-events: none; /* Para garantir que o clique seja no botão, não no ícone */
+}
+
+/* Adiciona a cor preta aos ícones */
+.text-black ion-icon {
+    color: black;
+}
+
+/* Transições para links de navegação */
+.nav-link {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Estilizações ao passar o mouse */
+.nav-link:hover {
+    color: #005a51; /* Troca a cor ao passar o mouse */
+    font-size: 1.2em; /* Expande o texto ao passar o mouse */
+}
