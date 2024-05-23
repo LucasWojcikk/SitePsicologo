@@ -75,3 +75,9 @@ function createPost() {
         });
 }
 
+
+// botão delete
+document.getElementById('trash-button').addEventListener('click', function() {
+    alert('Trash button clicked!');
+    // Adicione aqui a ação desejada para o botão
+});

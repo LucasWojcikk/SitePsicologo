@@ -27,3 +27,19 @@
 .navbar-brand img {
     margin-right: 10px; /* Espaçamento à direita do logo */
 }
+
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1rem; /* Ajusta o tamanho do ícone para ser menor */
+    padding: 0.25rem; /* Ajusta o padding para deixar o botão pequeno */
+    margin-right: 1rem; /* Ajusta o espaçamento à direita */
+    display: flex;
+    align-items: center;
+}
+
+.btn-icon ion-icon {
+    pointer-events: none; /* Para garantir que o clique seja no botão, não no ícone */
+}
