@@ -43,3 +43,7 @@
 .btn-icon ion-icon {
     pointer-events: none; /* Para garantir que o clique seja no botão, não no ícone */
 }
+
+ion-icon {
+    color: black;
+}
