@@ -74,3 +74,13 @@ function createPost() {
             alert("Ocorreu um erro ao criar a postagem.");
         });
 }
+
+
+// botão delete
+document.getElementById('trash-button').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que o link redirecione
+    if (confirm('Você deseja deletar essa postagem?')) {
+        // Aqui você pode adicionar a lógica para deletar o item
+        alert('Item deleted!');
+    }
+});

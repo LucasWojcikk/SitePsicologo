@@ -1,8 +1,10 @@
 /* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    text-align: left; /* Adicionado para garantir alinhamento à esquerda global */
+.nunito-sans {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Pode ajustar este valor conforme necessário */
+    font-style: normal;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 /* Estilo da barra de navegação */
@@ -32,3 +34,4 @@ body {
     color: #090000 !important;
     font-weight: bold;
 }
+
