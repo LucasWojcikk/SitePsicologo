@@ -9,22 +9,22 @@ public class Postagem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String titulo;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String resumo;
 
-    @Column(columnDefinition = "TEXT", nullable = true)
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String conteudo;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private LocalDate dataPostagem;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String autor;
 
     // Getters e setters

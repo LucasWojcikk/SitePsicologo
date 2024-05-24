@@ -1,5 +1,5 @@
 function getResponseApi() {
-    fetch("http://localhost:8080/postagem")
+    fetch("http://localhost:8080/psicologo")
         .then(function(response) {
             return response.json();
         })
@@ -12,22 +12,23 @@ function getResponseApi() {
 }
 
 function addPost(post) {
+    console.log(post)
     // Seleciona a div onde as postagens serão inseridas
-    const postagensContainer = document.getElementById("postagens");
+    const postagensContainer = document.getElementById("psicologos");
 
     // Cria a estrutura HTML para uma nova postagem com flip card
     const postElement = document.createElement("div");
     postElement.className = "col-md-4";
     postElement.innerHTML = `
-        <div onclick ="redirectToPosts()" class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">${post.titulo}</p>
-                </div>
-                <div class="flip-card-back">
-                    <p>${post.resumo}</p>
-                    <p>${post.autor}</p>
-                    <p>${post.dataPostagem}</p>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. ${post.nomeCompleto}</h5>
+                    <p class="card-text">Data de Nascimento: ${post.dataNascimento}</p>
+                    <p class="card-text">Data de Formação: ${post.dataFormacao}</p>
+                    <p class="card-text">Resumo do Currículo: ${post.resumoProfissional}.</p>
+                    <p class="card-text">Email: ${post.email}</p>
+                    <p class="card-text">CRP: ${post.crp}</p>
                 </div>
             </div>
         </div>
