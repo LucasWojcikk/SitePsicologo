@@ -8,7 +8,8 @@ public class Postagem {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "postagem_seq")
+    @SequenceGenerator(name = "postagem_seq", sequenceName = "postagem_sequence", allocationSize = 1)
     @Column(nullable = false)
     private Long id;
 

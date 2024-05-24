@@ -8,7 +8,8 @@ import java.time.LocalDate;
 public class Psicologo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "psicologo_seq")
+    @SequenceGenerator(name = "psicologo_seq", sequenceName = "psicologo_sequence", allocationSize = 1)
     @Column(nullable = false)
     private Long id;
 
