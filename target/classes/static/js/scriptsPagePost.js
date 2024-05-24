@@ -1,5 +1,5 @@
 function getResponseApi() {
-    fetch("http://localhost:8080/postagens")
+    fetch("http://localhost:8080/postagem")
         .then(function(response) {
             return response.json();
         })

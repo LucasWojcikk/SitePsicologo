@@ -1,13 +1,20 @@
 /* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    text-align: left; /* Adicionado para garantir alinhamento à esquerda global */
+.nunito-sans {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Pode ajustar este valor conforme necessário */
+    font-style: normal;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 /* Estilo da barra de navegação */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    color: #005a51; /* Troca a cor ao passar o mouse */
+    font-size: 1.2em !important; /* Expande o texto ao passar o mouse */
 }
 
 /* Estilo da marca da navbar */
@@ -17,9 +24,15 @@ body {
     align-items: center;
 }
 
+.navbar-brand:hover img{
+    transform: scale(1.1); /* aumenta a escala*/
+
+}
+
 /* Margem direita para a logo */
 .navbar-brand img {
     margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Estilo dos links da navbar */
@@ -94,6 +107,7 @@ button {
     overflow: hidden;
     z-index: 1;
     box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
 }
 
 button::before {
@@ -114,122 +128,55 @@ button:hover::before {
     width: 9em;
 }
 
-/* BOTÃO POWER */
+/*botão instagram */
+
+ion-icon {
+    font-size: 32px;
+}
+
+
+/* botão flutuante */
+
+
 .toggle-switch {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 80px; /* Modificado o tamanho para 80px */
-    height: 40px; /* Modificado o tamanho para 40px */
-    --light: #d8dbe0;
-    --dark: #28292c;
-    --link: rgb(27, 129, 112);
-    --link-hover: rgb(24, 94, 82);
-    z-index: 1000;
+    bottom: 20px; /* ajuste conforme necessário */
+    right: 20px; /* ajuste conforme necessário */
 }
 
 .switch-label {
-    position: absolute;
-    width: 100%;
-    height: 40px; /* Modificado o tamanho para 40px */
-    background-color: var(--dark);
-    border-radius: 20px; /* Modificado o raio para 20px */
-    cursor: pointer;
-    border: 2px solid var(--dark); /* Modificado a espessura para 2px */
+    display: block;
+    width: 60px;
+    height: 34px;
 }
 
 .checkbox {
-    position: absolute;
     display: none;
 }
 
-.slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px; /* Modificado o raio para 20px */
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider {
-    background-color: var(--light);
-}
-
-.slider::before {
-    content: "";
-    position: absolute;
-    top: 7px; /* Ajustado a posição vertical */
-    left: 7px; /* Ajustado a posição horizontal */
-    width: 26px; /* Modificado o tamanho para 26px */
-    height: 26px; /* Modificado o tamanho para 26px */
-    border-radius: 50%;
-    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
-    box-shadow: inset 12px -4px 0px 0px var(--light);
-    background-color: var(--dark);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.checkbox:checked ~ .slider::before {
-    -webkit-transform: translateX(50px);
-    -ms-transform: translateX(50px);
-    transform: translateX(50px);
-    background-color: var(--dark);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-
-
-/*card redes sociais*/
-
-button {
-    background: transparent;
-    position: relative;
-    padding: 5px 15px;
-    display: flex;
-    align-items: center;
-    font-size: 17px;
-    font-weight: 600;
-    text-decoration: none;
+.toggle-icon {
+    font-size: 24px;
     cursor: pointer;
-    border: 1px solid rgb(255,0,0);
-    border-radius: 25px;
-    outline: none;
-    overflow: hidden;
-    color: rgb(255,0,0);
-    transition: color 0.3s 0.1s ease-out;
-    text-align: center;
+    color: black; /* cor inicial */
 }
 
-button span {
-    margin: 10px;
+.toggle-icon.active {
+    color: black; /* cor quando clicado */
 }
 
-button::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    content: '';
-    border-radius: 50%;
-    display: block;
-    width: 20em;
-    height: 20em;
-    left: -5em;
-    text-align: center;
-    transition: box-shadow 0.5s ease-out;
-    z-index: -1;
+body.dark {
+    background-color: #121212; /* cor de fundo escura */
+    color: #fff; /* cor do texto */
 }
 
-button:hover {
-    color: #fff;
-    border: 1px solid rgb(255,0,0);
+/* imagem */
+
+/* Estilizando a imagem para ter uma transição suave */
+#interactive-image {
+    transition: transform 0.3s ease;
 }
 
-button:hover::before {
-    box-shadow: inset 0 0 0 10em rgb(255, 0, 0);
+/* Quando o mouse passa por cima da imagem, ela aumenta de tamanho */
+#interactive-image:hover {
+    transform: scale(1.1);
 }

@@ -1,28 +1,20 @@
-// Index - botão alterar tema
-function toggleDarkTheme() {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark');{
-
-        // Incompleto, vou terminar - Letícia
-    }
+function getResponseApi() {
+    fetch("http://localhost:8080/postagem")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            data.forEach(function(post) {
+                addPost(post)
+                // console.log(post);
+            });
+        });
 }
 
-// Seleciona a imagem
-var image = document.getElementById("interactive-image");
+function addPost(post) {
+    // Seleciona a div onde as postagens serão inseridas
+    const postagensContainer = document.getElementById("postagens");
 
-// Adiciona um ouvinte de eventos para o evento de passagem do mouse
-image.addEventListener("mouseover", function() {
-    // Altera o tamanho da imagem ao passar o mouse
-    image.style.transform = "scale(1.1)";
-});
-
-// Adiciona um ouvinte de eventos para o evento de retirada do mouse
-image.addEventListener("mouseout", function() {
-    // Retorna ao tamanho original da imagem quando o mouse é retirado
-    image.style.transform = "scale(1)";
-});
-
-<<<<<<< HEAD
     // Cria a estrutura HTML para uma nova postagem com flip card
     const postElement = document.createElement("div");
     postElement.className = "col-md-4";
@@ -44,9 +36,6 @@ image.addEventListener("mouseout", function() {
     // Adiciona a nova postagem ao container de postagens
     postagensContainer.querySelector('.row').appendChild(postElement);
 }
-=======
-//analisando possibilidades de interatividade no site usando js /\
->>>>>>> main
 
 function redirectToPosts(){
     window.location.href = '/pagePost.html';

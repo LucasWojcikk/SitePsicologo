@@ -1,9 +1,12 @@
 /* CreatePost */
 
 /* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+.nunito-sans {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Pode ajustar este valor conforme necessário */
+    font-style: normal;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 /* Estilo da barra de navegação */
@@ -103,3 +106,8 @@ footer .text-center {
     padding: 1rem 0;
 }
 
+/* Estilo para o link ativo na navbar */
+.navbar-nav .nav-item.active .nav-link {
+    color: #090000 !important;
+    font-weight: bold;
+}
