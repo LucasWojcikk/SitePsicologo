@@ -2,9 +2,11 @@ package br.com.unicuritiba.SitePsicologo.controllers;
 
 import br.com.unicuritiba.SitePsicologo.models.Postagem;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import br.com.unicuritiba.SitePsicologo.repositories.PostagemRepository;
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin("*")
 @RestController
@@ -38,12 +40,11 @@ public class PostagemController {
         return ("Deletado com sucesso!");
     }
 
-//    pesquisem sobre essa função
-//    @GetMapping("/{id}")
-//    public List<Postagem> findById(@PathVariable Long id) {
-//        List<Postagem> result = postagem.findById(id);
-//        return result;
-//    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Postagem> findById(@PathVariable Long id) {
+        Optional<Postagem> result = postagem.findById(id);
+        return ResponseEntity.ok(result.get());
+    }
 
 }
 

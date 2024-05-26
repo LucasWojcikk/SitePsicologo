@@ -1,14 +1,14 @@
+
+function getPostIdFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+}
+
 function getResponseApi() {
-    fetch("http://localhost:8080/postagem")
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            data.forEach(function(post) {
-                addPost(post)
-                // console.log(post);
-            });
-        });
+    const postId = getPostIdFromUrl();
+    fetch(`http://localhost:8080/postagem/${postId}`)
+        .then(response => response.json())
+        .then(post => addPost(post))
 }
 
 
@@ -20,7 +20,7 @@ function addPost(post) {
     const postElement = document.createElement("div");
     postElement.className = "col-md-4";
     postElement.innerHTML = `
-        <div onclick ="redirectToPosts()" class="flip-card">
+        <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <p class="title">${post.titulo}</p>
@@ -36,4 +36,17 @@ function addPost(post) {
 
     // Adiciona a nova postagem ao container de postagens
     postagensContainer.querySelector('.row').appendChild(postElement);
+}
+
+function deletePost() {
+    const postId = getPostIdFromUrl();
+    fetch(`http://localhost:8080/postagem/${postId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Postagem deletada com sucesso!');
+            window.location.href = '/posts.html'; // Redireciona para a página de posts
+        }
+    });
 }

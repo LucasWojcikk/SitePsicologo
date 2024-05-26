@@ -37,8 +37,12 @@ function addPost(post) {
     postagensContainer.querySelector('.row').appendChild(postElement);
 }
 
-function redirectToPosts(){
-    window.location.href = '/pagePost.html';
+// function redirectToPosts(){
+//     window.location.href = '/pagePost.html';
+// }
+
+function redirectToPosts(id){
+    window.location.href = `/pagePost.html?id=${id}`;
 }
 
 
