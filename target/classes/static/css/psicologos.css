@@ -9,6 +9,8 @@
 /* Estilo para os cards dos psicólogos */
 .card {
     transition: transform 0.3s;
+    display: flex;
+    height: 350px;
 }
 
 .card:hover {
@@ -30,25 +32,6 @@ h1 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 3rem;
-}
-
-/* Estilo para os cards dos psicólogos */
-.card {
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 0.75rem;
-}
-
-.card-text {
-    font-size: 0.9rem;
 }
 
 /* Estilo para informações específicas nos cards */

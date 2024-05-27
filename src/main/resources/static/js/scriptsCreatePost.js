@@ -9,7 +9,7 @@ function createPost() {
     
     console.log(postagem);
 
-    fetch('http://localhost:8080/cadastrar-postagem', {
+    fetch('http://localhost:8080/postagem', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
