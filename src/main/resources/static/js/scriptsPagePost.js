@@ -1,11 +1,11 @@
 
-function getPostIdFromUrl() {
+function getIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
 }
 
 function getResponseApi() {
-    const postId = getPostIdFromUrl();
+    const postId = getIdFromUrl();
     fetch(`http://localhost:8080/postagem/${postId}`)
         .then(response => response.json())
         .then(post => addPost(post))
@@ -39,20 +39,20 @@ function addPost(post) {
 }
 
 function deletePost() {
-    const postId = getPostIdFromUrl();
+    const postId = getIdFromUrl();
     fetch(`http://localhost:8080/postagem/${postId}`, {
         method: 'DELETE'
     })
     .then(response => {
         if (response.ok) {
             alert('Postagem deletada com sucesso!');
-            window.location.href = '/posts.html'; // Redireciona para a página de posts
+            window.location.href = '/posts.html'; 
         }
     });
 }
 
 
 function updateData(){
-    const postId = getPostIdFromUrl();
+    const postId = getIdFromUrl();
     window.location.href = `/updatePost.html?id=${postId}`;
 }

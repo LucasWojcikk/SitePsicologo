@@ -11,16 +11,18 @@ function getResponseApi() {
         .then(post => showData(post))
 }
 
+
 function showData(post) {
     const title = document.getElementById("postTitle")
     const autor = document.getElementById("postAuthor")
-    const data = document.getElementById("postData")
+    const data = document.getElementById("postDate")
     const resumo = document.getElementById("postSummary")
     const conteudo = document.getElementById("postContent")
+    console.log(post.dataPostagem)
 
     title.textContent = post.titulo
     autor.textContent = post.autor
-    // data.data = post.dataPostagem
+    data.value = post.dataPostagem
     resumo.textContent = post.resumo
     conteudo.textContent = post.conteudo
 

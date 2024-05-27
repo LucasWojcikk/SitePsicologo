@@ -4,47 +4,71 @@ function getResponseApi() {
             return response.json();
         })
         .then(function(data) {
-            data.forEach(function(post) {
-                addPost(post)
-                // console.log(post);
+            data.forEach(function(psicologo) {
+                addPsicologo(psicologo)
             });
         });
 }
 
 
-function addPost(post) {
-    console.log(post)
-    // Seleciona a div onde as postagens serão inseridas
-    const postagensContainer = document.getElementById("psicologos");
+function addPsicologo(psicologo) {
+    const psicologoContainer = document.getElementById("psicologos");
 
-    // Cria a estrutura HTML para uma nova postagem com flip card
-    const postElement = document.createElement("div");
-    postElement.className = "col-md-4";
-    postElement.innerHTML = `
+    const psicologoElement = document.createElement("div");
+    psicologoElement.className = "col-md-4";
+    psicologoElement.innerHTML = `
         <div class="card mb-4 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">Dr. ${post.nomeCompleto}</h5>
-                <p class="card-text">Data de Nascimento: ${post.dataNascimento}</p>
-                <p class="card-text">Data de Formação: ${post.dataFormacao}</p>
-                <p class="card-text">Resumo do Currículo: ${post.resumoProfissional}.</p>
-                <p class="card-text">Email: ${post.email}</p>
-                <p class="card-text">CRP: ${post.crp}</p>
+                <h5 class="card-title">Dr. ${psicologo.nomeCompleto}</h5>
+                <p class="card-text">Data de Nascimento: ${psicologo.dataNascimento}</p>
+                <p class="card-text">Data de Formação: ${psicologo.dataFormacao}</p>
+                <p class="card-text">Resumo do Currículo: ${psicologo.resumoProfissional}.</p>
+                <p class="card-text">Email: ${psicologo.email}</p>
+                <p class="card-text">CRP: ${psicologo.crp}</p>
+                <a class="edit text-black" onclick="updatePsicologo(${psicologo.id})" 
+                    style="
+                        float: right;
+                        margin-left: 5px;
+                        margin-bottom: 5px;
+                        color: black;
+                ">
+                    <ion-icon name="create-outline"></ion-icon>
+                </a>
+                <a class="trash text-black" onclick="deletePsicologo(${psicologo.id})" 
+                    style="
+                        float: right;
+                        margin-left: 5px;
+                        margin-bottom: 5px;
+                        color: black;
+                ">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </a>
             </div>
         </div>
     `;
 
-    // Adiciona a nova postagem ao container de postagens
-    postagensContainer.querySelector('.row').appendChild(postElement);
+    psicologoContainer.querySelector('.row').appendChild(psicologoElement);
 }
 
-// function redirectToPosts(){
-//     window.location.href = '/pagePost.html';
-// }
+function redirectToPosts(psicologoId){
+    window.location.href = `/pagePost.html?id=${psicologoId}`;
+}
 
-function redirectToPosts(id){
-    window.location.href = `/pagePost.html?id=${id}`;
+function deletePsicologo(psicologoId){
+    fetch(`http://localhost:8080/psicologo/${psicologoId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Psicologo deletado com sucesso!');
+            window.location.href = '/psicologos.html';
+        }
+    });
 }
 
 
+function updatePsicologo(psicologoId){
+    window.location.href = `/updatePsicologo.html?id=${psicologoId}`;
+}
 
 
