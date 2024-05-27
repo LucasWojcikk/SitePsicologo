@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Postagem - Site de Psicologia</title>
+    <title>Registrar Psicólogo - Site de Psicologia</title>
     <!-- Link para o CSS do Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Link para o arquivo de estilos personalizados -->
-    <link href="css/createPost.css" rel="stylesheet">
+    <link href="css/registrarPsi.css" rel="stylesheet">
     <!-- Link para a fonte Nunito Sans do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <script src="js/scriptsCreatePost.js"></script>
-
+    <script src="js/scriptsRegisterPsicologo.js"></script>
 </head>
 <body>
 
@@ -34,13 +33,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.html">Página Inicial</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="createPost.html">Criar postagem</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="posts.html">Posts</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="registrarPsi.html">Registrar Psicólogo</a>
             </li>
             <li class="nav-item">
@@ -48,66 +47,49 @@
             </li>
         </ul>
     </div>
-    </div>
 </nav>
 
-<!-- Seção de criação de postagem -->
-<!-- Titulo -->
+<!-- Seção de registro de psicólogo -->
 <div class="container mt-5">
-    <h2>Criar Nova Postagem</h2>
+    <h2>Registrar Novo Psicólogo</h2>
     <form>
+        <!-- Nome Completo -->
         <div class="form-group">
-            <label for="postTitle">Título</label>
-            <textarea class="form-control" id="postTitle" rows="1" placeholder="Título da sua postagem..."></textarea>
+            <label for="fullName">Nome Completo</label>
+            <textarea class="form-control" id="fullName" rows="1" placeholder="Nome completo..."></textarea>
         </div>
-    </form>
-</div>
-
-<!-- Autor -->
-<div class="container mt-5">
-    <form>
+        <!-- Data de Nascimento -->
         <div class="form-group">
-            <label for="postAuthor">Nome do autor</label>
-            <textarea class="form-control" id="postAuthor" rows="1" placeholder="Nome do autor..."></textarea>
-        </div>
-    </form>
-</div>
-
-<!-- Data -->
-<div class="container mt-5">
-    <form>
-        <div class="form-group">
-            <label for="postDate">Data da postagem</label>
+            <label for="birthDate">Data de Nascimento</label>
             <br>
-            <input type="date" id="postDate">
+            <input type="date" id="birthDate">
         </div>
-    </form>
-</div>
-
-<!-- Resumo -->
-<div class="container mt-5">
-    <form>
+        <!-- Data de Formação -->
         <div class="form-group">
-            <label for="postSummary">Resumo da postagem</label>
-            <textarea class="form-control" id="postSummary" rows="1" placeholder="Escreva aqui o resumo da sua postagem..."></textarea>
+            <label for="graduationDate">Data de Formação</label>
+            <br>
+            <input type="date" id="graduationDate">
         </div>
-    </form>
-</div>
-
-<!-- Conteúdo -->
-<div class="container mt-5">
-    <form>
+        <!-- Resumo do Currículo -->
         <div class="form-group">
-            <label for="postContent">Conteúdo da Postagem</label>
-            <textarea class="form-control" id="postContent" rows="10" placeholder="Escreva aqui o conteúdo da sua postagem..."></textarea>
+            <label for="resumeSummary">Resumo do Currículo</label>
+            <textarea class="form-control" id="resumeSummary" rows="3" placeholder="Resumo do currículo..."></textarea>
         </div>
-
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email...">
+        </div>
+        <!-- CRP -->
+        <div class="form-group">
+            <label for="crp">CRP</label>
+            <input type="text" class="form-control" id="crp" placeholder="CRP...">
+        </div>
+        <!-- Botões -->
         <div class="d-flex justify-content-start">
-            <button type="button" onclick="createPost()" class="btn btn-primary">Publicar</button>
-
-            <a href="index.html" class="btn btn-primary">Cancelar</a>
+            <button type="button" onclick="registerPsicologo()" class="btn btn-primary">Registrar</button>
+            <a href="index.html" class="btn btn-secondary ml-2">Cancelar</a>
         </div>
-
     </form>
 </div>
 
