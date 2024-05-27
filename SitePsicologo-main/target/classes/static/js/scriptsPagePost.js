@@ -27,7 +27,6 @@ function addPost(post) {
                 </div>
                 <div class="flip-card-back">
                     <p>${post.resumo}</p>
-                    <p>${post.conteudo}
                     <p>${post.autor}</p>
                     <p>${post.dataPostagem}</p>
                 </div>
