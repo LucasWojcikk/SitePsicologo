@@ -6,11 +6,9 @@ function getPostIdFromUrl() {
 
 function getResponseApi() {
     const postId = getPostIdFromUrl();
-    if (postId) {
-        fetch(`http://localhost:8080/postagem/${postId}`)
-            .then(response => response.json())
-            .then(post => addPost(post))
-    }
+    fetch(`http://localhost:8080/postagem/${postId}`)
+        .then(response => response.json())
+        .then(post => addPost(post))
 }
 
 
@@ -38,4 +36,23 @@ function addPost(post) {
 
     // Adiciona a nova postagem ao container de postagens
     postagensContainer.querySelector('.row').appendChild(postElement);
+}
+
+function deletePost() {
+    const postId = getPostIdFromUrl();
+    fetch(`http://localhost:8080/postagem/${postId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Postagem deletada com sucesso!');
+            window.location.href = '/posts.html'; // Redireciona para a página de posts
+        }
+    });
+}
+
+
+function updateData(){
+    const postId = getPostIdFromUrl();
+    window.location.href = `/updatePost.html?id=${postId}`;
 }

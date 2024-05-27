@@ -50,3 +50,9 @@ function deletePost() {
         }
     });
 }
+
+
+function updateData(){
+    const postId = getPostIdFromUrl();
+    window.location.href = `/updatePost.html?id=${postId}`;
+}
