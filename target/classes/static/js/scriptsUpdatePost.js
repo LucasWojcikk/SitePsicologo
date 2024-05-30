@@ -1,16 +1,15 @@
-function getPostIdFromUrl() {
+function getIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
 }
 
 function getResponseApi() {
-    const postId = getPostIdFromUrl();
+    const postId = getIdFromUrl();
     console.log(postId)
     fetch(`http://localhost:8080/postagem/${postId}`)
         .then(response => response.json())
         .then(post => showData(post))
 }
-
 
 function showData(post) {
     const title = document.getElementById("postTitle")
@@ -18,7 +17,6 @@ function showData(post) {
     const data = document.getElementById("postDate")
     const resumo = document.getElementById("postSummary")
     const conteudo = document.getElementById("postContent")
-    console.log(post.dataPostagem)
 
     title.textContent = post.titulo
     autor.textContent = post.autor
@@ -29,7 +27,7 @@ function showData(post) {
 }
 
 function updateData () {
-    const postId = getPostIdFromUrl();
+    const postId = getIdFromUrl();
 
     var postagem = {
         "id": postId,
@@ -40,8 +38,6 @@ function updateData () {
         "autor": document.getElementById("postAuthor").value
     };
     
-    // console.log(postagem);
-
     fetch('http://localhost:8080/postagem', {
         method: 'PUT',
         headers: {
@@ -55,7 +51,12 @@ function updateData () {
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert("Ocorreu um erro ao criar a postagem.");
+        alert("Ocorreu um erro ao atualizar a postagem.");
     });
 
+}
+
+function redirectToPost(){
+    const postId = getIdFromUrl();
+    window.location.href = `/pagePost.html?id=${postId}`;
 }

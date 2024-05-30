@@ -3,7 +3,7 @@ function registerPsicologo() {
         "nomeCompleto": document.getElementById("fullName").value,
         "dataNascimento": document.getElementById("birthDate").value,
         "dataFormacao": document.getElementById("graduationDate").value,
-        "resumoProfissional": document.getElementById("resumeSummary").value,
+        "resumoProfissional": document.getElementById("professionalResume").value,
         "email": document.getElementById("email").value,
         "crp": document.getElementById("crp").value
     };

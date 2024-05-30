@@ -7,7 +7,7 @@
     <!-- Link para o CSS do Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Link para o arquivo de estilos personalizados -->
-    <link href="css/createPost.css" rel="stylesheet">
+    <link href="css/updatePost.css" rel="stylesheet">
     <!-- Link para a fonte Nunito Sans do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
                 <a class="nav-link" href="posts.html">Posts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="registrarPsi.html">Registrar Psicólogo</a>
+                <a class="nav-link" href="registerPsicologo.html">Registrar Psicólogo</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="psicologos.html">Nossos Psicólogos</a>
@@ -104,7 +104,8 @@
 
         <div class="d-flex justify-content-start">
             <button type="button" onclick="updateData()" class="btn btn-primary">Atualizar</button>
-            <a href="index.html" class="btn btn-primary">Cancelar</a>
+            <!-- voltar para pagina da postagem especifica -->
+            <a class="btn btn-primary" onclick="redirectToPost()">Cancelar</a>
         </div>
 
     </form>
