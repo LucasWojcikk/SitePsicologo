@@ -33,7 +33,12 @@ function addPost(post) {
     postagensContainer.querySelector('.row').appendChild(postElement);
 }
 
+<<<<<<< Updated upstream
 
 function redirectToPagePost(id) {
     window.location.href = `/pagePost.html?id=${id}`;
+=======
+function redirectToPosts(){
+    window.location.href = 'pagePost.html';
+>>>>>>> Stashed changes
 }
