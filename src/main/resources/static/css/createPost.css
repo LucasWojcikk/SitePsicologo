@@ -9,6 +9,8 @@
     font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
+
+
 /* Cor de fundo e de texto da navbar quando o mouse passa por cima dos itens */
 .navbar-nav .nav-item:hover .nav-link {
     background-color: #A9A9A9;
@@ -32,6 +34,7 @@
 /* Margem direita para a logo */
 .navbar-brand img {
     margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Estilo dos links da navbar */
@@ -120,12 +123,3 @@ footer .text-center {
     font-weight: bold;
 }
 
-/* Estilizando a imagem para ter uma transição suave */
-#interactive-image {
-    transition: transform 0.3s ease;
-}
-
-/* Quando o mouse passa por cima da imagem, ela aumenta de tamanho */
-#interactive-image:hover {
-    transform: scale(1.1);
-}
