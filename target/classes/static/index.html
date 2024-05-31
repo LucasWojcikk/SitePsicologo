@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/css/ionicons.min.css" integrity="sha512-dzsGTn+jNZ1f/8JiQc1yWofrUNvpwgSmJL1clz0BDMaFGqyfqG8P+IlX6FZj46rkwHuFdkcOTMVunz55oalGkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- biblioteca AOS - animação do jumbotrom -->
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 	<!-- Link para o arquivo de estilos personalizados -->
 	<link href="css/index.css" rel="stylesheet">
@@ -62,28 +64,28 @@
 
 <!-- Conteúdo principal -->
 <div class="container mt-5">
-	<div class="row">
-		<div class="col-md-8">
-			<div class="jumbotron">
-				<h1 class="display-4">Umdia.psico</h1>
-				<p class="lead">Aqui você encontra recursos, artigos e informações sobre saúde mental.</p>
-				<hr class="my-4">
-				<p>No Umdia.psico acreditamos que a saúde mental é a base para uma vida plena e equilibrada. Nosso objetivo é fornecer informações, ferramentas e suporte para ajudar você a cuidar da sua mente e do seu bem-estar emocional. Aqui, você encontrará uma variedade de artigos escritos por especialistas em psicologia, abordando temas como ansiedade, depressão, estresse, autoajuda, e muito mais. Também oferecemos conselhos práticos para aplicar no dia a dia, promovendo um estilo de vida saudável e mentalmente equilibrado. Leia relatos inspiradores de pessoas que superaram desafios emocionais e encontraram caminhos para a saúde mental, e descubra recursos terapêuticos, como técnicas de terapia, exercícios de mindfulness e estratégias para desenvolver a resiliência emocional.
-					<br>
-					<br>
-					Além disso, oferecemos uma comunidade de apoio onde você pode participar de discussões e grupos de apoio, compartilhando suas experiências e aprendendo com os outros. Nosso compromisso é criar um espaço seguro e acolhedor, onde a conversa sobre saúde mental é aberta e sem tabus. Queremos empoderar você com o conhecimento e o apoio necessários para enfrentar os desafios da vida com mais confiança e serenidade.
-					<br>
-					<br>
-					<br>
-					Junte-se a nós nesta jornada de autoconhecimento e bem-estar. Sua mente merece esse cuidado!
-				</p>
-			</div>
-		</div>
-		<div class="col-md-4 d-flex align-items-center justify-content-center">
-			<img src="https://img.freepik.com/fotos-premium/coracao-humano-com-amor-de-flores-e-conceito-de-emocao-pessoa-de-bom-coracao-ajuda-e-caridade-generativa-ai_506134-37.jpg" class="img-fluid" alt="Imagem relacionada à saúde mental">
+<div class="row">
+	<div class="col-md-8">
+		<div class="jumbotron" data-aos="fade-up" data-aos-duration="1000">
+			<h1 class="display-4">Umdia.psico</h1>
+			<p class="lead">Aqui você encontra recursos, artigos e informações sobre saúde mental.</p>
+			<hr class="my-4">
+			<p>No Umdia.psico acreditamos que a saúde mental é a base para uma vida plena e equilibrada. Nosso objetivo é fornecer informações, ferramentas e suporte para ajudar você a cuidar da sua mente e do seu bem-estar emocional. Aqui, você encontrará uma variedade de artigos escritos por especialistas em psicologia, abordando temas como ansiedade, depressão, estresse, autoajuda, e muito mais. Também oferecemos conselhos práticos para aplicar no dia a dia, promovendo um estilo de vida saudável e mentalmente equilibrado. Leia relatos inspiradores de pessoas que superaram desafios emocionais e encontraram caminhos para a saúde mental, e descubra recursos terapêuticos, como técnicas de terapia, exercícios de mindfulness e estratégias para desenvolver a resiliência emocional.
+				<br>
+				<br>
+				Além disso, oferecemos uma comunidade de apoio onde você pode participar de discussões e grupos de apoio, compartilhando suas experiências e aprendendo com os outros. Nosso compromisso é criar um espaço seguro e acolhedor, onde a conversa sobre saúde mental é aberta e sem tabus. Queremos empoderar você com o conhecimento e o apoio necessários para enfrentar os desafios da vida com mais confiança e serenidade.
+				<br>
+				<br>
+				<br>
+				Junte-se a nós nesta jornada de autoconhecimento e bem-estar. Sua mente merece esse cuidado!
+			</p>
 		</div>
 	</div>
+	<div class="col-md-4 d-flex align-items-center justify-content-center">
+		<img src="https://img.freepik.com/fotos-premium/coracao-humano-com-amor-de-flores-e-conceito-de-emocao-pessoa-de-bom-coracao-ajuda-e-caridade-generativa-ai_506134-37.jpg" class="img-fluid" alt="Imagem relacionada à saúde mental" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+	</div>
 </div>
+
 
 
 <!-- Rodapé -->
@@ -145,7 +147,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 </body>
+
 
 </html>
