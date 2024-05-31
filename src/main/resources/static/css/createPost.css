@@ -119,3 +119,13 @@ footer .text-center {
     color: #090000 !important;
     font-weight: bold;
 }
+
+/* Estilizando a imagem para ter uma transição suave */
+#interactive-image {
+    transition: transform 0.3s ease;
+}
+
+/* Quando o mouse passa por cima da imagem, ela aumenta de tamanho */
+#interactive-image:hover {
+    transform: scale(1.1);
+}

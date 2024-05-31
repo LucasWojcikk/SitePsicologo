@@ -12,6 +12,15 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Cor de fundo e de texto da navbar quando o mouse passa por cima dos itens */
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: #A9A9A9;
+    color: black; /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas para um visual mais suave */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+
 .nav-link:{
     color: #005a51; /* Troca a cor ao passar o mouse */
     font-size: 1.2em !important; /* Expande o texto ao passar o mouse */
@@ -137,39 +146,7 @@ ion-icon {
 }
 
 
-/* botão flutuante */
 
-
-.toggle-switch {
-    position: fixed;
-    bottom: 20px; /* ajuste conforme necessário */
-    right: 20px; /* ajuste conforme necessário */
-}
-
-.switch-label {
-    display: block;
-    width: 60px;
-    height: 34px;
-}
-
-.checkbox {
-    display: none;
-}
-
-.toggle-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: black; /* cor inicial */
-}
-
-.toggle-icon.active {
-    color: black; /* cor quando clicado */
-}
-
-body.dark {
-    background-color: #121212; /* cor de fundo escura */
-    color: #fff; /* cor do texto */
-}
 
 /* imagem */
 
