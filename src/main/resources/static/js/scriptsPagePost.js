@@ -28,10 +28,10 @@ function addPost(post) {
             <p><strong>Data da Postagem:</strong> ${post.dataPostagem}</p>
             <hr>
             <p><strong>Resumo:</strong></p>
-            <p>${post.resumo}</p>
+            <p style="word-wrap: break-word;">${post.resumo}</p>
             <hr>
             <p><strong>Conteúdo da Postagem:</strong></p>
-            <p>${post.conteudo}</p>
+            <p style="word-wrap: break-word;">${post.conteudo}</p>
         </article>
     `;
 
