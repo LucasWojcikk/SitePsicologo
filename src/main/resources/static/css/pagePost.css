@@ -5,6 +5,11 @@
     font-style: normal;
     font-variation-settings: "wdth" 100, "YTLC" 500;
 }
+/* Estilo da barra de navegação */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Cor de fundo e de texto da navbar quando o mouse passa por cima dos itens */
 .navbar-nav .nav-item:hover .nav-link {
     background-color: #A9A9A9;
@@ -13,34 +18,40 @@
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
 }
 
-/* Estilo para a barra de navegação */
-.navbar {
-    background-color: #ffffff; /* Cor de fundo da navbar */
+
+.nav-link:{
+    color: #005a51; /* Troca a cor ao passar o mouse */
+    font-size: 1.2em !important; /* Expande o texto ao passar o mouse */
 }
 
-/* Estilo para os links na navbar */
+/* Estilo da marca da navbar */
+.navbar-brand {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand:hover img{
+    transform: scale(1.1); /* aumenta a escala*/
+
+}
+
+/* Margem direita para a logo */
+.navbar-brand img {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo dos links da navbar */
 .navbar-nav .nav-link {
-    color: #000000; /* Cor dos links */
-    font-weight: bold; /* Fonte em negrito */
+    font-size: 1.1em;
 }
 
 /* Estilo para o link ativo na navbar */
 .navbar-nav .nav-item.active .nav-link {
-    color: #ff0000; /* Cor do link ativo */
+    color: #090000 !important;
+    font-weight: bold;
 }
-
-/* Estilo para o logo na navbar */
-.navbar-brand img {
-    margin-right: 10px; /* Espaçamento à direita do logo */
-    transition: transform 0.3s ease-in-out;
-}
-
-.nav-brand:hover img{
-    transform: scale(1.1); /*Aumenta a escala*/
-
-}
-
-
 
 .btn-icon {
     background: none;
@@ -86,13 +97,3 @@ ion-icon {
     color: black;
 }
 
-/* Transições para links de navegação */
-.nav-link {
-    transition: color 0.3s ease, font-size 0.3s ease;
-}
-
-/* Estilizações ao passar o mouse */
-.nav-link:hover {
-    color: #005a51; /* Troca a cor ao passar o mouse */
-    font-size: 1.2em; /* Expande o texto ao passar o mouse */
-}
