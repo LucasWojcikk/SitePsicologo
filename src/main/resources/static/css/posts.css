@@ -8,9 +8,10 @@
 
 .card p {
   font-size: 17px;
-  font-weight: 400;
   line-height: 20px;
   color: #666;
+  max-height: 100px; /* Defina a altura máxima desejada */
+  overflow: hidden; /* Para esconder o conteúdo que ultrapassa a altura máxima */
 }
 
 .card p.small {
