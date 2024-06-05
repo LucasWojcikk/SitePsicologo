@@ -5,7 +5,7 @@ function getResponseApi() {
         })
         .then(function(data) {
             data.forEach(function(post) {
-                addPost(post)
+                addPost(post);
             });
         });
 }
@@ -16,29 +16,22 @@ function addPost(post) {
     const postElement = document.createElement("div");
     postElement.className = "col-md-4";
     postElement.innerHTML = `
-        <div class="flip-card" onclick="redirectToPagePost(${post.id})">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">${post.titulo}</p>
+        <div class="card">
+            <a class="card1" href="pagePost.html?id=${post.id}">
+                <p>${post.titulo}</p>
+                <p class="small">${post.resumo}</p>
+                <div class="go-corner">
+                    <div class="go-arrow">
+                        →
+                    </div>
                 </div>
-                <div class="flip-card-back">
-                    <p>${post.resumo}</p>
-                    <p>${post.autor}</p>
-                    <p>${post.dataPostagem}</p>
-                </div>
-            </div>
+            </a>
         </div>
     `;
 
     postagensContainer.querySelector('.row').appendChild(postElement);
 }
 
-<<<<<<< Updated upstream
-
 function redirectToPagePost(id) {
     window.location.href = `/pagePost.html?id=${id}`;
-=======
-function redirectToPosts(){
-    window.location.href = 'pagePost.html';
->>>>>>> Stashed changes
 }
