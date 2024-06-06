@@ -42,7 +42,8 @@
 .card1 {
   display: block;
   position: relative;
-  max-width: 262px;
+  width: 260px;
+  height: 180px;
   background-color: #f2f8f9;
   border-radius: 4px;
   padding: 32px 24px;
@@ -208,4 +209,8 @@
 /* Adicionando distanciamento entre os cards */
 .col-md-4 {
     margin-bottom: 50px;  /* Aumenta a margem inferior dos cards */
+}
+
+.card{
+  border-style: none;
 }
