@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umdia.psico</title>
+
+    <!-- Link para o favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" type="image/png">
+
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/css/ionicons.min.css"
+        integrity="sha512-dzsGTn+jNZ1f/8JiQc1yWofrUNvpwgSmJL1clz0BDMaFGqyfqG8P+IlX6FZj46rkwHuFdkcOTMVunz55oalGkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- biblioteca AOS - animação do jumbotron -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Link para o arquivo de estilos personalizados -->
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Marca do site com logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" width="50" height="50"
+                class="d-inline-block align-top" alt="Logo">
+            Umdia.psico
+        </a>
+
+        <!-- Botão para menu responsivo -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links de navegação -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="posts.html">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="psicologos.html">Nossos Psicólogos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center h-100">
+        <div class="row justify-content-center align-items-center w-100">
+            <form class="col-sm-8 col-md-6 col-lg-4 form">
+                <p class="form-title">Faça login para iniciar sua sessão</p>
+                <div class="input-container">
+                    <input type="email" placeholder="Digite seu email">
+                    <span></span>
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="submit">Entrar</button>
+
+                <p class="signup-link">Não tem uma conta? <a href="#" data-toggle="modal" data-target="#registerModal">Registre-se</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Escolha uma opção:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="registerPsicologo.html" class="btn btn-primary btn-block">Registrar-se como psicólogo</a>
+                    <a href="registerUsuario.html" class="btn btn-primary btn-block">Registrar-se como usuário</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

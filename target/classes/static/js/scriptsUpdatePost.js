@@ -5,7 +5,7 @@ function getIdFromUrl() {
 
 function getResponseApi() {
     const postId = getIdFromUrl();
-    console.log(postId)
+    // console.log(postId);
     fetch(`http://localhost:8080/postagem/${postId}`)
         .then(response => response.json())
         .then(post => showData(post))

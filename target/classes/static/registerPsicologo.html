@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Psicólogo - Site de Psicologia</title>
+    <!-- icon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" type="image/png">
     <!-- Link para o CSS do Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Link para o arquivo de estilos personalizados -->
@@ -85,11 +87,27 @@
             <label for="crp">CRP</label>
             <input type="text" class="form-control" id="crp" placeholder="CRP...">
         </div>
+
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="text" class="form-control" id="password" placeholder="Senha...">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Confirmar senha</label>
+            <input type="text" class="form-control" id="confirmPassword" placeholder="Confirmar senha...">
+        </div>
+
+        <br>
+
         <!-- Botões -->
         <div class="d-flex justify-content-start">
-            <button type="button" onclick="registerPsicologo()" class="btn btn-primary">Registrar</button>
-            <a href="index.html" class="btn btn-secondary ml-2">Cancelar</a>
+            <button type="button" 
+                onclick="registerPsicologo()" class="btn btn-primary" style="align-content: center; margin-bottom: 50px;">Registrar
+            </button>
+            <a href="index.html" class="btn btn-secondary ml-2" style="align-content: center; margin-bottom: 50px;">Cancelar</a>
         </div>
+
     </form>
 </div>
 

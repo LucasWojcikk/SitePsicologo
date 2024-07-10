@@ -5,15 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Umdia.psico</title>
+	<!-- Link para o favicon -->
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" type="image/png">
 	<!-- Link para o CSS do Bootstrap -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/css/ionicons.min.css" integrity="sha512-dzsGTn+jNZ1f/8JiQc1yWofrUNvpwgSmJL1clz0BDMaFGqyfqG8P+IlX6FZj46rkwHuFdkcOTMVunz55oalGkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- biblioteca AOS - animação do jumbotrom -->
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 	<!-- Link para o arquivo de estilos personalizados -->
 	<link href="css/index.css" rel="stylesheet">
 	<script src="js/scripts.js"></script>
+	<script src="js/index.js"></script>
 </head>
 
 <body>
@@ -25,10 +30,12 @@
 		<img src="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" width="50" height="50" class="d-inline-block align-top" alt="Logo">
 		Umdia.psico
 	</a>
+
 	<!-- Botão para menu responsivo -->
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+
 	<!-- Links de navegação -->
 	<div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav mr-auto">
@@ -49,21 +56,23 @@
 			</li>
 		</ul>
 	</div>
+	
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="btn btn-primary" href="login.html">Login</a>
+			</li>
+		</ul>
+	</div>
+
 </nav>
 
-<!-- Botão de alternância flutuante -->
-<div class="toggle-switch" onclick="toggleDarkTheme()">
-	<label class="switch-label">
-		<input type="checkbox" class="checkbox">
-		<ion-icon name="contrast-outline" class="toggle-icon"></ion-icon>
-	</label>
-</div>
 
 <!-- Conteúdo principal -->
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-md-8">
-			<div class="jumbotron">
+			<div class="jumbotron" data-aos="fade-up" data-aos-duration="1000">
 				<h1 class="display-4">Umdia.psico</h1>
 				<p class="lead">Aqui você encontra recursos, artigos e informações sobre saúde mental.</p>
 				<hr class="my-4">
@@ -79,7 +88,7 @@
 			</div>
 		</div>
 		<div class="col-md-4 d-flex align-items-center justify-content-center">
-			<img src="https://img.freepik.com/fotos-premium/coracao-humano-com-amor-de-flores-e-conceito-de-emocao-pessoa-de-bom-coracao-ajuda-e-caridade-generativa-ai_506134-37.jpg" class="img-fluid" alt="Imagem relacionada à saúde mental">
+			<img src="https://img.freepik.com/fotos-premium/coracao-humano-com-amor-de-flores-e-conceito-de-emocao-pessoa-de-bom-coracao-ajuda-e-caridade-generativa-ai_506134-37.jpg" class="img-fluid" alt="Imagem relacionada à saúde mental" data-aos="fade-up" data-aos-duration="1000">
 		</div>
 	</div>
 </div>
@@ -141,10 +150,12 @@
 <!-- Scripts do Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 </body>
-
 </html>

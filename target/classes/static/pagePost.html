@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postagem Completa - Umdia.psico</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Adicione os links para seus arquivos CSS personalizados aqui -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/pagePost.css">
+    <!-- icon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2201/2201606.png" type="image/png">
     <!-- Link para a fonte Nunito Sans do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <script src="js/scriptsPagePost.js"></script>
 </head>
 
 <body onload="getResponseApi()">
@@ -48,8 +50,6 @@
         </ul>
         <!-- Botões no canto superior direito -->
         <div class="d-flex">
-            
-            
             <!-- Botão para editar a postagem -->
             <a class="edit text-black" onclick="updateData()" style="margin-left: 5px;">
                 <ion-icon name="create-outline"></ion-icon>
@@ -64,10 +64,9 @@
     </div>
 </nav>
 
-
 <!-- Conteúdo principal -->
 <div class="container mt-5" id="postagens">
-    <h1 class="mb-4">Página da postagem</h1>
+    <h1 class="mb-4"></h1>
     <div class="row">
         <!-- Postagens serão adicionadas aqui -->
     </div>
@@ -76,10 +75,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Adicione os links para seus arquivos JavaScript personalizados aqui -->
+<script src="js/scriptsPagePost.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>
-
